@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    background: black;
+    color: white;
+}
+.center {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.ring {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation: ring 2s linear infinite;
+}
+@keyframes ring{
+  0%{
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 2px #e65c00;
+  }
+  20%{
+    transform: rotate(15deg);
+    box-shadow: 1px 5px 2px #18b201;
+  }
+  40%{
+    transform: rotate(50deg);
+    box-shadow: 1px 5px 2px #0456c8;
+  }
+  60%{
+    transform: rotate(95deg);
+    box-shadow: 1px 5px 2px #acf306;
+  }
+  70%{
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 2px #d10393;
+  }
+  80%{
+    transform: rotate(260deg);
+    box-shadow: 1px 5px 2px #18b201;
+  }
+  90%{
+    transform: rotate(330deg);
+    box-shadow: 1px 5px 2px #c506bc;
+  }
+  100%{
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 2px #9ad103;
+  }
+}
+
+.ring:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(255,255,255,.3);
+}
+span{
+  color: #737373;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 200px;
+  animation: text 3s ease-in-out infinite;
+}
+@keyframes text{
+  0%{
+    color: black;
+  }
+}
+
+.snow, .snow2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./images/snow.png);
+  background-position: 0 0;
+}
+
+.snow{
+  background-size: 70em;
+  animation: snowfall 30s linear infinite;
+}
+
+.snow2{
+  background-size: 50em;
+  animation: snowfall2 30s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes snowfall{
+  100% {
+      background-position: 70em 70em;
+  }
+}
+
+@keyframes snowfall2 {
+  100% {
+      background-position: 50em 0;
+  }
+}

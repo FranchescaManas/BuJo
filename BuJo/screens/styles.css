@@ -1,0 +1,141 @@
+@font-face {
+    font-family: testfont;
+    src: url("../Home\ Christmas.otf") format("opentype");
+}
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL&display=swap');
+body{
+    background-image: url('../images/bg2.jpg');
+    background-size: cover;
+}
+
+
+.container{
+    max-width: 30% !important;
+    min-width: 350px;
+    margin: 25px 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(192, 192, 192, 0.719);
+    border: 15px solid green;
+    border-image: repeating-linear-gradient(
+        45deg,
+        rgb(240, 46, 39),
+        rgb(0, 155, 0) 20px,
+        rgb(235, 235, 235) 20px,
+        rgb(241, 241, 241) 40px
+        )
+        20;
+}
+
+.schedule{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DB5427;
+    
+}
+
+.schedule p{
+    /* margin: 0 !important; */
+    width: 100%;
+    padding-left: 10px;
+    font-size: 22px;
+    /* border: 1px solid black; */
+    font-family: testfont;
+    text-align: center;
+    margin: 8px;
+    color: rgba(248, 248, 248, 0.925);
+}
+
+.agenda-container{
+    border: 1px solid grey;
+    margin: 15px auto;
+    border-left-width: 15px;
+    /* border-left-color: rgb(240, 212, 89) !important; */
+    padding: 5px;
+    width: 95%;
+    box-shadow: 1px 1px 1px 2px #575757;
+    background-color: rgba(255, 255, 255, 0.753);
+    font-family: 'Charis SIL', serif;
+    font-weight: 600;
+    
+
+}
+
+.add-button{
+    background-color: transparent;
+    border: none;
+}
+.task-agenda{
+    font-size: 18px !important;
+}
+.subject-agenda{
+    font-size: 14px !important;
+
+}
+
+
+.snow, .snow2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./../images/snow.png');
+    background-position: 0 0;
+  }
+  
+  .snow{
+    background-size: 70em;
+    animation: snowfall 30s linear infinite;
+  }
+  
+  .snow2{
+    background-size: 50em;
+    animation: snowfall2 30s linear infinite;
+    opacity: 0.5;
+  }
+  
+  @keyframes snowfall{
+    100% {
+        background-position: 70em 70em;
+    }
+  }
+  
+  @keyframes snowfall2 {
+    100% {
+        background-position: 50em 0;
+    }
+  }
+
+  .navbar{
+    width: 100%;
+    height: 60px;
+    background-color: #613c1bd0;
+  }
+ .text-box h1{
+    /* font-size: 190px; */
+    /* line-height: 160px; */
+    /* margin-left: -10px; */
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url('../images/back.png');
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+ }
+
+ @keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
+.button{
+    position: relative;
+    z-index: 1000;
+}
